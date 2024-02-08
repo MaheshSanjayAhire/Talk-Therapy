@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin:0px;
+  }
+  
+  body{
+    background-color: #c4d9E9;
+  }
+  
+  .header_section{
+    background: #86B6F6;
+  }
+  .nav-link{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+    
+  }
+  .nav-link.email{
+    text-transform: none;
+    color: #fff;
+  }
+  .nav-link img{
+    width: 1rem;
+  }
+  .refer_btn{
+    text-transform: capitalize;
+    font-weight: bold;
+   
+    background: #3559E0;
+    border-radius: 25px;
+    height: 50px;
+    width: 120px;
+  }
+  #navbarSupportedContent ul{
+    width: 80%;
+  }
+  #navbarSupportedContent .nav_inner_container {
+    width: 30%;
+    background: #000000;
+  }
+  
+  .rectangle2{
+    background-color: #474747;
+    position: sticky;
+    }
+  
+  /* .email{
+    position: absolute;
+    margin-left: 20px;
+    
+    text-transform:none;
+    color: #fff;
+  } */
+  
+  
+  .d-block{
+    width: 1500px;
+    height: 500px;
+  }
+  
+  /* .menunav{
+    /* position: absolute;
+    margin-left: 200px; */
+  
+  .leftside{
+    margin-left:450px;
+    color: white;
+  }
+  
+  .thirdcarouseltext{
+    /* margin-top: 30px; */
+    margin-left: 500px;
+    margin-bottom: 180px;
+  }
+  
+  .secondtextcarousel{
+    /* margin-left: px; */
+    margin-bottom: 200px;
+    margin-right: 400px;
+  }
+  
+  

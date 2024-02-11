@@ -15,6 +15,7 @@
     font-weight: bold;
     color: #fff;
     
+    
   }
   .nav-link.email{
     text-transform: none;
@@ -34,15 +35,21 @@
   }
   #navbarSupportedContent ul{
     width: 80%;
+    
   }
   #navbarSupportedContent .nav_inner_container {
     width: 30%;
     background: #000000;
   }
-  
+  /* .change:hover{
+    color: #3559E0;
+  } */
   .rectangle2{
     background-color: #474747;
+    position: -webkit-sticky;
     position: sticky;
+    top: 0;
+    z-index: 1000;
     }
   
   /* .email{
@@ -80,4 +87,80 @@
     margin-right: 400px;
   }
   
-  
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(72, 94, 116);
+}
+h6{
+    color: rgb(53, 125, 184);
+}
+li{
+    color: rgb(72, 94, 116);
+}
+.mySlider {
+    height: 400px;
+}
+.h3,.subh{
+    color: rgb(72, 94, 116);
+}
+.h2,.mainh{
+    color: rgb(53, 125, 184);
+}
+
+i{
+    font-size: 16px !important;
+}
+.left-div1 {
+    flex: 1;
+}
+.left-div {
+    flex: 5;
+    text-align: left;
+}
+
+.right-div1,
+.right-div2 {
+    flex: 2;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.therapist-card {
+  background-color: #f8d7da; /* Red */
+}
+
+.patient-card {
+  background-color: #d4edda; /* Green */
+}
+
+.appointment-card {
+  background-color: #d1ecf1; /* Blue */
+}
+
+.session-card {
+  background-color: #fff3cd; /* Yellow */
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}

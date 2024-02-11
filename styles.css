@@ -164,3 +164,64 @@ i{
   transform: scale(1.05);
   transition: transform 0.3s;
 }
+
+.assessment_banner__cq0P8 {
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20221226/pngtree-simple-blue-background-rules-and-regulations-display-board-background-image_1495101.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+}
+
+.assessment_banner_main__BVv_B {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assessment_banner_right__XyyM0 {
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.assessment_assesment__u5bTX {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.assessment_assesment_main__VU9VU {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.assessment_assesment_list__C7gIb {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .16);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.assessment_imgOne__JrEKt {
+  width: 30%;
+  height: 100%;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.assessment_assesment_content__bm4fc:hover {
+  width: 70%;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}

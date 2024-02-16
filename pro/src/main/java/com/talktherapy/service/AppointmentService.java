@@ -16,4 +16,8 @@ public class AppointmentService {
 	{
 		repo.save(a);
 	}
+	
+	public void deleteApp(String username) {
+		repo.deleteById(username);
+	}
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.talktherapy.model.Appointment;
 import com.talktherapy.service.AdminService;
+import com.talktherapy.service.AppointmentService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -20,6 +21,8 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adservice;
+	@Autowired
+	private AppointmentService aservice;
 	
 	@GetMapping("/admin")
 	public String showall(Model m)
@@ -56,5 +59,13 @@ public class AdminController {
 		List<Appointment> adm=adservice.getAllapp();
 		m.addAttribute("appts", adm);
 		return "AdminConfirm.html";
+	}
+	
+	@GetMapping("/deleteapp/{username}")
+	public String deleteapp(@PathVariable String username,HttpSession session)
+	{
+		aservice.deleteApp(username);
+		//session.setAttribute("msg", "deleted successfully");
+		return "redirect:/adminconfirm";
 	}
 }

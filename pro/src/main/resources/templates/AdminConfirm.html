@@ -26,7 +26,8 @@
       <th scope="col">Date</th>
       <th scope="col">Time</th>
       <th scope="col">Counsellor</th>
-      <th scope="col">Action</th>
+      <th scope="col">Confirm Meeting</th>
+      <th scope="col">Delete Meeting</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +38,9 @@
       <th th:text="${e.counsellor}"></th>
       <td>
 		  <a class="btn btn-sm btn-primary" th:href="@{/edit/{username}(username=${e.username})}">CONFIRM</a>
-		  <!--<a class="btn btn-sm btn-danger" th:href="@{/delete/{username}(username=${e.username})}">Delete</a>-->
+	  </td>
+	  <td>
+		  <a class="btn btn-sm btn-danger" th:href="@{/deleteapp/{username}(username=${e.username})}">Delete</a>
 	  </td>
     </tr>
     

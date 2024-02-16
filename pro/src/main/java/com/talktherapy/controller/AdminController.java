@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.talktherapy.model.Appointment;
 import com.talktherapy.service.AdminService;
@@ -47,12 +48,6 @@ public class AdminController {
 		return "Index";
 	}
 	
-	@GetMapping("/adminlogin")
-	public String adminlogin()
-	{
-		return "AdminLogin.html";
-	}
-	
 	@GetMapping("/adminconfirm")
 	public String adminconfirm(Model m)
 	{
@@ -67,5 +62,23 @@ public class AdminController {
 		aservice.deleteApp(username);
 		//session.setAttribute("msg", "deleted successfully");
 		return "redirect:/adminconfirm";
+	}
+	
+	@GetMapping("/adminlogin")
+	public String adminlogin()
+	{
+		return "AdminLogin.html";
+	}
+	
+	@PostMapping("/adminlogin")
+	public String validlogin(Model m,@RequestParam String email,@RequestParam String password)
+	{
+		boolean isValidAdmin=adservice.validateAdmin(email, password);
+		if(!isValidAdmin)
+		{
+			m.addAttribute("errormessege", "Invalid Credentials");
+			return "AdminLogin.html";
+		}
+		return "AdminDashBoard.html";
 	}
 }

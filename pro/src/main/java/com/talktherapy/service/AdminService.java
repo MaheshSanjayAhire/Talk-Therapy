@@ -34,4 +34,9 @@ public class AdminService {
 	{
 		adrepo.save(a);
 	}
+	
+	public boolean validateAdmin(String email, String password)
+	{
+		return email.equalsIgnoreCase("admin@123") && password.equalsIgnoreCase("admin@123");
+	}
 }

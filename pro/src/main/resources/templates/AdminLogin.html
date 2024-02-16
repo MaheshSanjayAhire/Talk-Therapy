@@ -21,19 +21,19 @@
 	<section>
             <div class="form-box mb-3">
                 <div class="form-value">
-                    <form>
+                    <form method="post">
                         <h2>Admin Login</h2>
-                        <div class="inputbox"> <ion-icon name="mail-outline"></ion-icon> <input type="email" required>
-                            <label>Email</label>
+                        <div class="inputbox"> <ion-icon name="mail-outline"></ion-icon> <input type="email" 
+                        	name="email" required> <label>Email</label>
                         </div>
                         <div class="inputbox"> <ion-icon name="lock-closed-outline"></ion-icon> <input type="password"
-                                required> <label>Password</label> </div>
+                            name="password" required> <label>Password</label> </div>
                         <div class="forget"> <label><input type="checkbox">Remember Me</label> <a href="#">Forgot
-                                Password</a> </div> <button class="login">Log In</button>
-                        <div class="register">
-                            <p>Don't have an account? <a href="#">Sign Up</a></p>
-                        </div>
+                                Password</a> 
+                        </div> 
+                        <button class="login">Log In</button>
                     </form>
+                    <div style="color: red;" th:text="${errormessage}"></div>
                 </div>
             </div>
         </section> 

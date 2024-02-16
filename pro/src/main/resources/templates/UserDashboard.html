@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+	<div th:replace="Header"></div>
+	
+	<h2 class="text-center mt-5"
+            style="color:rgb(53, 125, 184)">
+            WELCOME USER</h2>
+	
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card therapist-card">
+                    <div class="card-body">
+						<a href="userbooking">
+                        <h5 class="card-title">Profile</h5>
+                        <p class="card-text">Edit Your Profile Details </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card patient-card">
+            <div class="card-body">
+				<a href="userbooking">
+                <h5 class="card-title">Appointment Now</h5>
+                <p class="card-text">To Book Your Appointment</p>
+                 </a>
+            </div>
+        </div>
+</div>
+
+
+    
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card appointment-card">
+                    <div class="card-body">
+						<a href="userappointment">
+                        <h5 class="card-title">Sessions</h5>
+                        <p class="card-text">Counselling Session Details</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card session-card">
+                    <div class="card-body">
+						<a href="/">
+                        <h5 class="card-title">Logout </h5>
+                        <p class="card-text">Thank you !</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+	<div th:replace="Footer"></div>
+</body>
+</html>

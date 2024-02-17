@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.talktherapy.model.Appointment;
 import com.talktherapy.model.User;
+import com.talktherapy.model.UserLogin;
 import com.talktherapy.repository.UserRepository;
 import com.talktherapy.service.AppointmentService;
 import com.talktherapy.service.UserServiceImp;
@@ -35,6 +37,23 @@ public class UserController {
 		aservice.addApp(a);
 		
 		return "Index.html";
+	}
+	
+	@PostMapping("/userlogin")
+	public String userlogin(@ModelAttribute User u,Model model)
+	{
+		String p=u.getPassword();	
+		User user=user1.findByEmail(u.getEmail());
+		System.out.println(user);
+		if(p.equals(user.getPassword()))
+		{
+			model.addAttribute("info", user);
+			return "UserDashBoard.html";
+		}
+		else
+		{
+			return "UserLogin.html";
+		}
 	}
 	
 	@GetMapping("/user")
@@ -120,6 +139,12 @@ public class UserController {
 		//session.setAttribute("msg", "employee updated successfully");
 		return "redirect:/userlist";
 	}
+//	@GetMapping("/userappointment")
+//	public String userappointment(@path usernmae)
+//	{
+//		query- aapointmentrepo -> fimdbyUsername
+//		return "UserAppointment.html";
+//	}
 	@GetMapping("/userappointment")
 	public String userappointment()
 	{

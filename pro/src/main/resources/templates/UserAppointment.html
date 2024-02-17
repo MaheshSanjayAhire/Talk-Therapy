@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Appointments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #c4d9E9;">
+	<!--<div th:replace="HeaderWithLogout"></div>-->
+	
+	<h2 class="text-center mt-5"
+            style="color:rgb(53, 125, 184)">
+            LIST OF APPOINTMENTS</h2>
+	
+	<form th:action="@{/userappointment/{email}}" th:object="${appt}" method="get">
+    <div class="container p-5">
+	<table class="table table-striped">
+  <thead class="bg-primary text-white">
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Counsellor</th>
+      <th scope="col">Meeting Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="e:${appt}">
+      <th th:text="${e.username}"></th>
+      <td th:text="${e.date}"></td>
+      <td th:text="${e.time}"></td>
+      <th th:text="${e.counsellor}"></th>
+      <td>
+		  <a class="btn btn-sm btn-primary" th:href="${e.link}">JOIN MEETING</a>
+	  </td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+	</form>
+    
+</div>
+
+<br>
+<br>
+<br>
+<br>
+</div>
+<!--<div th:replace="Footer"></div>-->
+</body>
+</html>

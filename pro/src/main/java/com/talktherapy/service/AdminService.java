@@ -39,4 +39,14 @@ public class AdminService {
 	{
 		return email.equalsIgnoreCase("admin@123") && password.equalsIgnoreCase("admin@123");
 	}
+	
+	public Appointment getByemail(String email)
+	{
+		Optional<Appointment> a=adrepo.findByEmail(email);
+		if(a.isPresent())
+		{
+			return a.get();
+		}
+		return null;
+	}
 }

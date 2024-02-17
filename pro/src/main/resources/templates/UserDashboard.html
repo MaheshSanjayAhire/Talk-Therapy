@@ -13,8 +13,8 @@
     
 </head>
 <body>
-	<div th:replace="Header"></div>
-	
+<!--	<div th:replace="Header"></div>
+-->	
 	<h2 class="text-center mt-5"
             style="color:rgb(53, 125, 184)">
             WELCOME USER</h2>
@@ -48,7 +48,7 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="card appointment-card">
                     <div class="card-body">
-						<a href="userappointment">
+						<a href="@{'/userappointment/'+ ${info.email}}">
                         <h5 class="card-title">Sessions</h5>
                         <p class="card-text">Counselling Session Details</p>
                         </a>
@@ -76,6 +76,6 @@
 <br>
 
 </div>
-	<div th:replace="Footer"></div>
-</body>
+<!--	<div th:replace="Footer"></div>
+--></body>
 </html>

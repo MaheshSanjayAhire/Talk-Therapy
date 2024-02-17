@@ -6,5 +6,7 @@ import com.talktherapy.model.Counsellor;
 
 @Repository
 public interface CounsellorRepository extends JpaRepository<Counsellor,Long> {
+	
+	Counsellor findByEmail(String email);
 
 }

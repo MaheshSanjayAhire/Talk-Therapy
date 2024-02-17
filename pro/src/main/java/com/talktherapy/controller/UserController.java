@@ -155,10 +155,10 @@ public class UserController {
 //		query- aapointmentrepo -> fimdbyUsername
 //		return "UserAppointment.html";
 //	}
-	@GetMapping("/userappointment")
-	public String userappointment(@PathVariable String username, Model model)
+	@GetMapping("/userappointment/{email}")
+	public String userappointment(@PathVariable String email, Model model)
 	{
-		List<Appointment> appointments = repo.findAllByUsername(username);
+		List<Appointment> appointments = repo.getUserByEmail(email);
 		model.addAttribute("appointments", appointments);
 		return "UserAppointment.html";
 	}

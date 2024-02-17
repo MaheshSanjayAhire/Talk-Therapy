@@ -21,43 +21,6 @@
 
 <body>
     <section>
-        <!--<div class="form-box mb-3">
-            <div class="form-value">
-                <form>
-                    <h2>Appointment Confirmation</h2>
-                    <div class="mt-2 mb-3">
-                        <div class="inputbox"> <ion-icon name="person-outline"></ion-icon> <input type="text"
-                                required> <label>Username</label> </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="inputbox"> <ion-icon name="calendar-outline"></ion-icon> <input type="date" required> 
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="inputbox"> <ion-icon name="time-outline"></ion-icon> <select required>
-                                <option value="" disabled selected hidden>Select Time</option>
-                                <option value="male">9 AM to 10 AM</option>
-                                <option value="female">10 AM to 11 AM</option>
-                                <option value="other">11 AM to 12 PM</option>
-                            </select> </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="inputbox"> <ion-icon name="person-outline"></ion-icon> <select required>
-                                <option value="" disabled selected hidden>Select Counsellor</option>
-                                <option value="male">Dr.Mahesh</option>
-                                <option value="female">Dr.Shashank</option>
-                                <option value="other">Dr.Shubham</option>
-                            </select> </div>
-                    </div>
-                    <div class="mt-2 mb-3">
-                        <div class="inputbox"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> <input type="text"
-                                required> <label>Paste Online Meeting Link</label> </div>
-                    </div>
-                    <button class="wider-button">Sent</button>
-                </form>
-            </div>
-        </div>
-        -->
         
         <div class="container mt-5">
     <form th:action="@{/confirmed}" method="post" th:object="${uname}">
@@ -68,7 +31,10 @@
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" name="username" th:value="${uname.username}" readonly>
         </div>-->
-        
+        <div class="mb-3">
+            <label for="name" class="form-label">Email</label>
+            <input type="text" class="form-control" name="email" th:value="${uname.email}">
+        </div>
         
         
         <div class="mb-3">

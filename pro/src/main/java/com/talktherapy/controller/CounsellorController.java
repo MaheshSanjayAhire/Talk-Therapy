@@ -79,4 +79,20 @@ public class CounsellorController {
 	{
 		return "CounsellorLogin.html";
 	}
+	
+	@PostMapping("counsellorslogin")
+	public String counsellorslogin(@ModelAttribute Counsellor c,Model m) 
+	{
+		String p=c.getPassword();
+		Counsellor counsellor=counsellor1.findByEmail(c.getEmail());
+		if(p.equals(counsellor.getPassword()))
+		{
+			return "redirect:/counsellor";
+		}
+		else 
+		{
+			return "CounsellorLogin.html";
+		}
+		
+	}
 }

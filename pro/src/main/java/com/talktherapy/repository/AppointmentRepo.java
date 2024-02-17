@@ -13,5 +13,9 @@ public interface AppointmentRepo extends JpaRepository<Appointment, String>{
 	
 	// @Query()
 	List<Appointment> findAllByUsername(String username);
+	
+	List<Appointment> findAllByEmail(String email);
+
+	List<Appointment> getUserByEmail(String email);
 
 }

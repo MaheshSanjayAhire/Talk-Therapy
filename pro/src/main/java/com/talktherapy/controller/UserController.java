@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.talktherapy.model.Appointment;
+import com.talktherapy.model.Counsellor;
 import com.talktherapy.model.User;
 import com.talktherapy.model.UserLogin;
+import com.talktherapy.repository.AppointmentRepo;
+import com.talktherapy.repository.CounsellorRepository;
 import com.talktherapy.repository.UserRepository;
 import com.talktherapy.service.AppointmentService;
 import com.talktherapy.service.UserServiceImp;
@@ -28,6 +31,11 @@ public class UserController {
 	private UserServiceImp service;
 	@Autowired
 	private AppointmentService aservice;
+	@Autowired
+	private CounsellorRepository counsellorRepository;
+	
+	@Autowired
+	private AppointmentRepo repo;
 	
 	
 	@PostMapping("/appfilled")
@@ -89,8 +97,10 @@ public class UserController {
 		return "About.html";
 	}
 	@GetMapping("/userbooking")
-	public String userbooking()
+	public String userbooking(Model model)
 	{
+		List<Counsellor> list = counsellorRepository.findAll();
+		model.addAttribute("list", list);
 		return "UserBooking.html";
 	}
 	@GetMapping("/adminappconfirm")
@@ -146,8 +156,10 @@ public class UserController {
 //		return "UserAppointment.html";
 //	}
 	@GetMapping("/userappointment")
-	public String userappointment()
+	public String userappointment(@PathVariable String username, Model model)
 	{
+		List<Appointment> appointments = repo.findAllByUsername(username);
+		model.addAttribute("appointments", appointments);
 		return "UserAppointment.html";
 	}
 	

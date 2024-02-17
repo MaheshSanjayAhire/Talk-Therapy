@@ -48,9 +48,7 @@
                     <div class="mb-5">
                         <div class="inputbox"> <ion-icon name="person-outline"></ion-icon> <select required name="counsellor">
                                 <option value="" disabled selected hidden>Select Counsellor</option>
-                                <option value="Dr.Mahesh">Dr.Mahesh</option>
-                                <option value="Dr.Shashank">Dr.Shashank</option>
-                                <option value="Dr.Shubham">Dr.Shubham</option>
+                                <option th:each="i : ${list}" th:value="${i.fullname}" th:text="${i.fullname}"></option>
                             </select> </div>
                     </div>
                     <button class="wider-button">Book</button>

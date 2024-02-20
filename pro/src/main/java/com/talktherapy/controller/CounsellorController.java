@@ -96,4 +96,12 @@ public class CounsellorController {
 		}
 		
 	}
+	
+//	@GetMapping("/userappointment/{email}")
+//	public String userappointment(@PathVariable String email,Model model)
+//	{
+//		List<Appointment> a=service.getUserByEmail(email);
+//		model.addAttribute("appt", a);
+//		return "UserAppointment.html";
+//	}
 }

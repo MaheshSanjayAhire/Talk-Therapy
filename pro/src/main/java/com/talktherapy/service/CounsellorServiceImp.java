@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.talktherapy.model.Appointment;
 import com.talktherapy.model.Counsellor;
 import com.talktherapy.repository.CounsellorRepository;
 
@@ -41,4 +43,9 @@ public class CounsellorServiceImp implements CounsellorService {
 	public List<Counsellor> getAllCounsellors() {
 		return cr.findAll();
 	}
+
+//	public List<Appointment> getUserByEmail(String email) {
+//		List<Appointment> appt=cr.findAllByEmail(email);
+//		return appt;
+//	}
 }
